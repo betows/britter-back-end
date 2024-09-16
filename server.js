@@ -17,7 +17,10 @@ connectDB();
 const app = express();
 
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+    origin: 'https://britter.netlify.app/',
+    credentials: true
+  }));
 
 const limiter = rateLimit({
     windowMs: 10 * 60 * 1000, // 10 minutes
