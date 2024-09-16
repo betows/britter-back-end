@@ -18,7 +18,7 @@ const app = express();
 
 app.use(helmet());
 app.use(cors({
-    origin: 'https://britter.netlify.app/',
+    origin: 'https://britter.netlify.app',
     credentials: true
   }));
 
